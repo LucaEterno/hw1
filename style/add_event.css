@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --background: #f4ede5;
+    --text: #8d7e7e;
+    --hl_text: rgb(189, 30, 89);
+    --foreground: white;
+    --shadow: rgba(0,0,0,0.1);
+    --foresep: #f1f1f1;
+
+    --font: 'Roboto', sans-serif;
+}
+
+body {
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    background-image: radial-gradient(circle at center center, rgb(255, 56, 92) 0%, 
+    rgb(230, 30, 77) 27.5%, rgb(227, 28, 95) 40%, rgb(215, 4, 102) 57.5%, 
+    rgb(189, 30, 89) 75%, rgb(189, 30, 89) 100%) !important;
+    color: var(--text);
+}
+
+body, input, textarea, button {
+    font-family: var(--font);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    background: var(--foreground);
+    position: fixed;
+    top: 0;
+    box-shadow: 0 0 8px var(--shadow);
+    z-index: 10;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text);
+    padding: 0 10px;
+}
+
+nav a.here {
+    color: var(--hl_text);
+}
+
+nav a:hover {
+    color: var(--hl_text);
+}
+
+nav .l_nav {
+    padding: 10px 0 10px 20px;
+}
+
+nav .r_nav {
+    text-align: right;
+    padding: 10px 20px 10px 0;
+}
+
+.r_nav, .l_nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.username{
+    display: inline-block;
+    color: var(--hl_text);
+    margin-right: 8px;
+}
+
+.profilo{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.logo {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+main {
+    margin: 100px 10px;
+    width: 90%;
+    background: var(--foreground);
+    border-radius: 10px;
+    box-shadow: 0 0 8px var(--shadow);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+main h1{
+    color: var(--hl_text);
+    font-size: 32px;
+}
+    
+.section{
+    color: white;
+    background-color:rgb(189, 30, 89);
+    border-radius: 10px;
+    box-shadow: 0 0 8px var(--shadow);
+    margin: 50px 0;
+    width: 42.5%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+    
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form div{
+    width: 100%;
+    margin: 5px 10px;
+}
+
+input[type=text], input[type=date], select {
+    background: var(--background);
+    padding: 8px;
+    border: 2px solid var(--background);
+    color: var(--text);
+    border-radius: 4px;
+    width: 100%;
+}
+
+input[type=text]:focus, input[type=date]:focus, select:focus{
+    border: 2px solid var(--hl_text);
+    outline-width: 0;
+}
+
+input[type=submit] {
+    color: rgb(189, 30, 89);
+    font-size: 14px;
+    background-color: white;
+    border: 2px solid rgb(189, 30, 89);
+    border-radius: 4px;
+    text-align: center;
+    padding: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+
+input[type=submit]:hover{
+    color: white;
+    background-color: rgb(189, 30, 89);
+}
+
+main .error {
+    padding: 4px 10px;
+    background: #ffe2e2;
+    border-radius: 7px;
+    color: #fa1c2c;
+    margin: 5px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+.mobileMod{
+    display: none;
+}
+
+.modaleM{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 0, 0,0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 20;
+}
+
+.modaleM div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 250px;
+    font-size: 32px;
+    color: white;
+}
+
+.modaleM a {
+    text-decoration: none;
+    color: white;
+    padding: 0 10px;
+}
+
+.modaleM a.here {
+    color: var(--hl_text);
+}
+
+.modaleM a:hover {
+    color: var(--hl_text);
+}
+
+.hide_nav{
+    display: none;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(189, 30, 89);
+    margin: 10px 8px;
+
+}
+
+.hide_nav div{
+    width: 64%;
+    height: 8%;
+    margin: 5px;
+    background-color: white;
+}
+
+@media (max-width: 750px){
+    .r_nav, .l_nav{
+        display: none;
+    }
+    .hide_nav{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    background: rgb(189, 30, 89);
+    color: white;
+    position: fixed;
+    bottom: 0;
+    /*box-shadow: 0 0 8px var(--shadow);*/
+    z-index: 10;
+}

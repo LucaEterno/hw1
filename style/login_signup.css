@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --background: #f4ede5;
+    --text: #8d7e7e;
+    --hl_text: rgb(189, 30, 89);
+    --foreground: white;
+    --font: 'Roboto', sans-serif;
+}
+
+body {
+    background-image: radial-gradient(circle at center center, rgb(255, 56, 92) 0%, 
+    rgb(230, 30, 77) 27.5%, rgb(227, 28, 95) 40%, rgb(215, 4, 102) 57.5%, 
+    rgb(189, 30, 89) 75%, rgb(189, 30, 89) 100%) !important;
+    color: var(--text);
+
+    /*height: 100%;*/
+    margin: 0;
+    padding: 8px;
+    display: flex;
+}
+
+body.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+}
+
+body, input, button, textarea {
+    font-family: var(--font);
+}
+
+main {
+    width: 50%;
+    background: var(--foreground);
+    border-radius: 10px;
+    box-shadow: 0px 0px 7px rgba(0,0,0,0.08);
+    margin: auto;
+    /*margin-top: 100px;*/
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main.login {
+    width: 32.5%;
+    margin: 0;
+}
+
+main section {
+    width: 60%;
+    padding-bottom: 20px;
+    text-align: center;
+    min-height: 500px;
+}
+
+
+main.login section {
+    /*
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 0;
+    */
+    min-height: 0px;
+}
+
+.logo_esterno {
+    width: 60%;
+    margin: 20px 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+.logo_interno{  
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+main h1 {
+    color: var(--hl_text);
+    font-weight: bold;
+    font-size: 32px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+main .error {
+    padding: 4px 10px;
+    background: #ffe2e2;
+    border-radius: 7px;
+    color: #fa1c2c;
+    margin: 5px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+label {
+    font-size: 14px;
+}
+
+form {
+    max-width: 100%;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+main input {
+    width: 100%;
+    font-family: var(--font);
+}
+
+input[type=text], input[type=password], select{
+    background: var(--background);
+    padding: 8px;
+    border: 2px solid var(--background);
+    color: var(--text);
+    border-radius: 4px;
+}
+
+select {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+input[type=text]:focus, input[type=password]:focus, select:focus {
+    border: 2px solid var(--hl_text);
+    outline-width: 0;
+}
+
+.choice-grid {
+    align-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+.choice-grid div{
+    margin-bottom: 20px;
+    background: var(--background);
+    border: 2px solid var(--background);;
+    width: 47.5%;
+  
+    display: flex;
+    flex-direction: column;
+}
+
+input[type=submit] {
+    background-color: #cc0030;
+    border: 0;
+    border-radius: 4px;
+    padding: 8px;
+    color: var(--foreground);
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+}
+
+body.login input[type=submit] {
+    margin-top: 8px;
+}
+
+input[type=submit]:hover {
+    background: #ff003c;
+}
+
+input[type=submit]:disabled, input[type=submit]:disabled:hover, input[type=submit]:disabled:active {
+    background: #85233a;
+} 
+
+main form > div {
+    margin: 5px 10px
+}
+
+form span {
+    opacity: 0;
+    font-size: 11px;
+}
+
+form > div {
+    text-align: right;
+}
+
+form > div *{
+    text-align: left;
+}
+
+
+.errorj label {
+    color: #fa1c2c;
+}
+
+.errorj span {
+    opacity: 1;
+    font-size: 11px;
+    color: #fa1c2c;
+}
+
+.errorj input{
+    border-color: #fa1c2c;
+}
+
+
+main .signup {
+    font-size: 14px;
+}
+
+main .signup a {
+    text-decoration: none;
+    color: #2e1061;
+}
+
+main .signup a:hover {
+    color: #ff003c;;
+}
+
+@media (max-width: 800px) {
+    main .main_left, main .main_right { width: 100% !important }
+    main {flex-direction: column; height: auto;}
+    main .main_left {border-radius: 10px 10px 0 0; height: 150px;}
+    main.login .main_right {min-height: auto !important}
+}
